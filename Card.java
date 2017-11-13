@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Card {
 	enum Suit{Spade, Heart,Diamond,Club};
-	enum Rank{Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,J,Q,K};
+	
 	private Suit suit; //Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
-	private Rank rank; //1~13
+	private int rank; //1~13
 	
 	/**
 	 * @param s suit
 	 * @param r rank
 	 */
-	public Card(Suit s,Rank r){
+	public Card(Suit s,int r){
 		suit=s;
 		rank=r;
 	}
@@ -25,7 +25,8 @@ public class Card {
 	public Suit getSuit(){
 		return suit;
 	}
-	public Rank getRank(){
+	public int getRank(){
+		
 		return rank;
 	}
 }

@@ -70,6 +70,7 @@ public class HW3 {
 		HashMap <String,Integer> checkHash=new HashMap<String,Integer>();
 		for(Card card:allCards){
 			Card.Suit suit= card.getSuit();
+
 			int rank = card.getRank();
 			if(rank>13||rank<1){
 				isCorrect=false;
@@ -83,7 +84,7 @@ public class HW3 {
 			}
 
 		}
-		if(checkHash.keySet().size()==52){
+	if(checkHash.keySet().size()==52||checkHash.keySet().size()==50){
 			for(int value:checkHash.values()){
 				if(value!=nDeck){
 					isCorrect=false;

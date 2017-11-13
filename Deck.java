@@ -3,7 +3,7 @@ package object_orientation;
 import java.util.ArrayList;
 import java.util.Random;
 
-import object_orientation.Card.Rank;
+
 
 public class Deck {
 	private ArrayList<Card> cards;
@@ -20,7 +20,7 @@ public class Deck {
 		//Sample code end
 		for(int i=0;i<nDeck;i++){
 			for(Card.Suit s1:Card.Suit.values()){
-				for(Card.Rank r1:Card.Rank.values()){
+				for(int r1 =0;r1<14;r1++){
 					Card card=new Card(s1,r1);
 					cards.add(card);
 				}
