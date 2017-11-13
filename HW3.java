@@ -1,23 +1,24 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-//import java.util.Scanner;
+import java.util.Scanner;
+
 
 /**
- * @author TODO: please add student ID and name here
+ * @author TODO: B0544225 ³¯±å®¦
  * Try to write some comments for your codes (methods, 10 points)
  */
 public class HW3 {
 	public static void main(String[] args) {
-		//Scanner sc = new Scanner(System.in);
-		//System.out.println("input N(deck of cards):");
-		//String testn= sc.nextLine(); 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("input N(deck of cards):");
+		String testn= sc.nextLine(); 
 		int nDeck=1;
 		//TODO: please add new fields and methods to Deck class (35)
-		//usedCard (5 points)
-		//nUsed (5 points)
-		//getOneCard (10 points)
-		//shuffle (10 points)
-		//constructor (5 points)
+		//usedCard;
+		//nUsed;
+		//getOneCard;
+		//shuffle;
+		///o constructor;
 		Deck deck=new Deck(nDeck);
 		
 		//TODO: please check your output, make sure that you print newCard and newCard2 on your screen  (10 points)
