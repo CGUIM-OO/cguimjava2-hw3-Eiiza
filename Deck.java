@@ -12,6 +12,7 @@ public class Deck {
 	
 	public Deck(int nDeck){
 		cards=new ArrayList<Card>();
+		usedCards=new ArrayList<Card>();
 		//1 Deck have 52 cards, https://en.wikipedia.org/wiki/Poker
 		//Hint: Use new Card(x,y) and 3 for loops to add card into deck
 		//Sample code start
@@ -20,12 +21,13 @@ public class Deck {
 		//Sample code end
 		for(int i=0;i<nDeck;i++){
 			for(Card.Suit s1:Card.Suit.values()){
-				for(int r1 =0;r1<14;r1++){
+				for(int r1 =1;r1<14;r1++){
 					Card card=new Card(s1,r1);
 					cards.add(card);
 				}
 			}
 		}
+		shuffle();
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
@@ -42,19 +44,25 @@ public class Deck {
 	}
 	public void shuffle(){
 		Random rnd= new Random();
-		int i=rnd.nextInt(cards.size());	//亂數要設上限值
-		for(int j=0;j<cards.size();j++){	
+		cards.addAll(usedCards);
+		nUsed = 0;
+		usedCards = new ArrayList<Card>();
+		
+		for(int j=0;j<cards.size();j++){	//亂數要設上限值
+			int i=rnd.nextInt(cards.size());
 			Card n=cards.get(j);
-			cards.add(i,n);
+			Card temp =cards.get (i);
+			cards.set(i,n);
+			cards.set(j, temp);
 		}	//按順序選牌之後，放到亂數出來的隨機位置
-	
+		
 		
 	}
 	public Card getOneCard(){
 		Card temp = null;
 		
 		if (cards.size()==0){
-			cards.addAll(usedCards);
+			
 			shuffle();
 			return getOneCard();
 		}

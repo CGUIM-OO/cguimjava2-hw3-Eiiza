@@ -13,6 +13,7 @@ public class Card {
 	 * @param r rank
 	 */
 	public Card(Suit s,int r){
+		
 		suit=s;
 		rank=r;
 	}
@@ -20,7 +21,7 @@ public class Card {
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		System.out.print(getSuit()+" "+getRank());
+		System.out.println(suit+" "+rank);
 	}
 	public Suit getSuit(){
 		return suit;
